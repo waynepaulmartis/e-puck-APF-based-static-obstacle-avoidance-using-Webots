@@ -1,0 +1,81 @@
+#VRML_SIM R2021a utf8
+WorldInfo {
+  coordinateSystem "NUE"
+}
+Viewpoint {
+  orientation 0.5057274458121034 0.6958071221686497 0.5099923521894694 4.349542764257837
+  position -2.6073722658792478 5.803603790568278 0.2321811540770541
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+RectangleArena {
+  floorSize 4 4
+  floorTileSize 2 2
+  wallHeight 0.3
+}
+WoodenBox {
+  translation -0.600561 0 0.951814
+  name "wooden box(1)"
+  size 0.2 0.2 0.2
+}
+WoodenBox {
+  translation 1.00242 0 -0.885073
+  name "wooden box(2)"
+  size 0.2 0.2 0.2
+}
+Solid {
+  translation 1.08392 0 1.27175
+  rotation 0.8219343361418155 -0.3404717413649086 0.4566212220244039 9.24575721532935e-17
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.1
+      }
+    }
+  ]
+  name "solid(1)"
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.1
+  }
+  physics Physics {
+  }
+}
+Solid {
+  translation -0.354814 0.04876723893710088 -0.512536
+  rotation -0.675174343021407 0.6741438055618357 -0.29944905401122524 -9.647546674371679e-17
+  children [
+    Shape {
+      appearance PBRAppearance {
+        roughness 1
+        metalness 0
+      }
+      geometry Cylinder {
+        height 0.1
+        radius 0.1
+      }
+    }
+  ]
+  boundingObject Cylinder {
+    height 0.1
+    radius 0.1
+  }
+  physics Physics {
+  }
+}
+WoodenBox {
+  translation -1.45303 1.77636e-15 -0.930636
+  size 0.2 0.2 0.2
+}
+DEF coordinate E-puck {
+  translation -1.8 0 -0.9
+  controller "epuck_APF"
+  supervisor TRUE
+}
