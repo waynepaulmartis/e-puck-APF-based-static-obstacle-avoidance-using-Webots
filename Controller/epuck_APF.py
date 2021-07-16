@@ -184,26 +184,6 @@ while robot.step(TIME_STEP) != -1:
     
     if mag(x_pos,z_pos,bot.x_f,bot.z_f) < 0.01:
         break
-
-x_coordinate = numpy.array(x_coord)
-z_coordinate = numpy.array(z_coord)
-dct = {'x-axis' : [x_coord],
-       'z-axis' : [z_coord]
-       }
-df1 = pd.DataFrame({'time' : time,
-                    'x-axis' : x_coord,
-                    'z-axis' : z_coord,
-                    'x-rep-field' : x_g_rep_pf,
-                    'z-rep-field' : z_g_rep_pf,
-                    'x-att-field' : x_g_at_pf,
-                    'z-att-field' : z_g_at_pf,
-                    'x-field' : x_pf,
-                    'z-field' : z_pf,
-                    'heading angle' : heading_angle,
-                    'omega' : omega,
-                    'left speed' : l_speed,
-                    'right speed' : r_speed})
-df1.to_excel("trial21.xlsx", sheet_name="x coord")
     
 bot.plot()
 
